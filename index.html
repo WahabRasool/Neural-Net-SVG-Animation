@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Neural Net SVG Animation</title>
+</head>
+<body>
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+            <path id='p1' d='M7.5 20 L37.5 50 M7.5 20 L 12.5 50 M7.5 20 L 87.5 50 M7.5 20 L 62.5 50' />
+            <path id='p2' d='M21.5 20 L62.5 50 M21.5 20 L 37.5 50 M21.5 20 L 12.5 50 M21.5 20 L 87.5 50' />
+            <path id='p3' d='M35.5 20 L37.5 50 M35.5 20 L 62.5 50 M35.5 20 L 87.5 50 M35.5 20 L 12.5 50' />
+            <path id='p4' d='M50 20 L12.5 50 M50 20 L 37.5 50 M50 20 L 62.5 50 M50 20 L 87.5 50' />
+            <path id='p5' d='M64.5 20 L62.5 50 M64.5 20 L 87.5 50 M64.5 20 L 12.5 50 M64.5 20 L 37.5 50' />
+            <path id='p6' d='M78.5 20 L87.5 50 M78.5 20 L 37.5 50 M78.5 20 L 62.5 50 M78.5 20 L 12.5 50' />
+            <path id='p7' d='M92.5 20 L87.5 50 M92.5 20 L 37.5 50 M92.5 20 L 12.5 50 M92.5 20 L 62.5 50' />
+        </defs>
+        <g fill="#121212" opacity="0.6">
+            <circle cx="7.5" cy="20" r="5" />
+            <circle cx="21.5" cy="20" r="5" />
+            <circle cx="35.5" cy="20" r="5" />
+            <circle cx="50" cy="20" r="5" />
+            <circle cx="64.5" cy="20" r="5" />
+            <circle cx="78.5" cy="20" r="5" />
+            <circle cx="92.5" cy="20" r="5" />
+            <circle cx="12.5" cy="50" r="10" />
+            <circle cx="37.5" cy="50" r="10" />
+            <circle cx="62.5" cy="50" r="10" />
+            <circle cx="87.5" cy="50" r="10" />
+            <circle cx="50" cy="85" r="13" />
+        </g>
+    
+        <g fill="#0ff">
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p1" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p2" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p3" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p4" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p5" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                    <mpath href="#p6" />
+                </animateMotion>
+            </circle>
+            <circle cx="0" cy="0" r="5">
+                <animateMotion id="a11" dur="4s" repeatCount="indefinite">
+                    <mpath href="#p7" />
+                </animateMotion>
+            </circle>
+        </g>
+        <g fill="#0ff">
+            <circle cx="12.5" cy="50" r="8" opacity="0">
+                <animate id="a1" attributeName="r" values="8; 10" dur="1s" begin="4s; a1.end+3s" repeatCount="1" />
+                <animate attributeName="cy" values="50; 85" dur="1s" begin="4s; a1.end+3s" repeatCount="1" />
+                <animate attributeName="cx" values="12.5; 50" dur="1s" begin="4s; a1.end+3s" repeatCount="1" />
+                <animate attributeName="opacity" values="0;1" dur="3s" begin="0s; a1.end" repeatCount="1" fill="freeze" />
+            </circle>
+            <circle cx="37.5" cy="50" r="8">
+                <animate attributeName="r" values="8; 10" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cy" values="50; 85" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cx" values="37.5; 50" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="opacity" values="0;1" dur="3s" begin="0s; a1.end" repeatCount="1" fill="freeze" />
+            </circle>
+            <circle cx="62.5" cy="50" r="8">
+                <animate attributeName="r" values="8; 10" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cy" values="50; 85" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cx" values="62.5; 50" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="opacity" values="0;1" dur="3s" begin="0s; a1.end" repeatCount="1" fill="freeze" />
+            </circle>
+            <circle cx="87.5" cy="50" r="8">
+                <animate attributeName="r" values="8; 10" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cy" values="50; 85" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="cx" values="87.5; 50" dur="1s" begin="4s; a1.end+3s" repeatCount="0" />
+                <animate attributeName="opacity" values="0;1" dur="3s" begin="0s; a1.end" repeatCount="1" fill="freeze" />
+            </circle>
+        </g>
+        <circle cx="50" cy="85" r="10" opacity="0" fill="#0ff">
+                <animate attributeName="r" values="10; 15" dur="0.5s" begin="4.9s; a1.end+3.9s" repeatCount="0" />
+                <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.9s; a1.end+3.9s" repeatCount="1" />
+            </circle>
+    </svg>
+</body>
+</html>
